@@ -10,4 +10,8 @@ public class Weapon extends Item{
     float getDamage(){
         return this.damage;
     }
+
+    void setDamage(float damage){
+        this.damage = damage;
+    }
 }

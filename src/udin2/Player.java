@@ -1,6 +1,6 @@
 package udin2;
 
-public class Player extends Attack{
+public class Player{
     private String name;
     private static float health;
     private static int playerStack;
@@ -27,19 +27,40 @@ public class Player extends Attack{
         return this.health;
     }
 
-    @Override
     float getAttack(){
-        return 0;
+        return this.weapon.getDamage();
+    }
+
+    void setDefense(float def) {
+        this.armor.setDefense(def);
+    }
+
+    void setHealt(float hp){
+        this.health = hp;
+    }
+
+    float getDefense(){
+        return this.armor.getDefense();
+    }
+
+    float getDamage(){
+        return this.weapon.getDamage();
     }
 
     public void displayStat(){
-        System.out.println("================");
-        System.out.println(this.name + " Stats");
-        System.out.println("Nama \t\t: " + this.name);
-        System.out.println("Health \t\t: " + this.health);
-        System.out.println("Armor Name \t: " + this.armor.getName());
-        System.out.println("Armor def \t: " + this.armor.getDefense());
-        System.out.println("Weapon Name \t: " + this.weapon.getName());
-        System.out.println("Weapon Damage \t: " + this.weapon.getDamage());
+        if ( this.health == 0 ){
+            System.out.println("================================");
+            System.out.println("   " + this.name + " MATI !");
+            System.out.println("================================");
+        }else {
+            System.out.println("================");
+            System.out.println(this.name + " Stats");
+            System.out.println("Nama \t\t: " + this.name);
+            System.out.println("Health \t\t: " + this.health);
+            System.out.println("Armor Name \t: " + this.armor.getName());
+            System.out.println("Armor def \t: " + this.armor.getDefense());
+            System.out.println("Weapon Name \t: " + this.weapon.getName());
+            System.out.println("Weapon Damage \t: " + this.weapon.getDamage());
+        }
     }
 }

@@ -4,7 +4,7 @@ Disaat orang lain bermain PUBG/ML si udin masih latihan bersama bot untuk mening
 
 ## Folder Structure
 
-The workspace contains two folders by default, where:
+The workspace contains , where:
 
 - `src`: the folder to maintain sources
 - `lib`: the folder to maintain dependencies

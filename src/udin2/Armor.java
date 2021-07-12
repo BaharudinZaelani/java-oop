@@ -11,4 +11,8 @@ public class Armor extends Item {
         return this.defense;
     }
 
+    void setDefense(float defense){
+        this.defense = defense;
+    }
+
 }
