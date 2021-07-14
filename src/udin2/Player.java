@@ -2,7 +2,7 @@ package udin2;
 
 public class Player{
     private String name;
-    private static float health;
+    private float health;
     private static int playerStack;
     private Armor armor;
     private Weapon weapon;
@@ -13,6 +13,7 @@ public class Player{
         this.health = 100;
         this.armor = armor;
         this.weapon = weapon;
+
     }
 
     Player (){
@@ -23,12 +24,12 @@ public class Player{
         this.weapon = new Weapon("pedang basic", 100);
     }
 
-    float getHealt(){
-        return this.health;
+    String getName(){
+        return this.name;
     }
 
-    float getAttack(){
-        return this.weapon.getDamage();
+    float getHealt(){
+        return this.health;
     }
 
     void setDefense(float def) {
@@ -43,18 +44,17 @@ public class Player{
         return this.armor.getDefense();
     }
 
-    float getDamage(){
+    float getAttack(){
         return this.weapon.getDamage();
     }
 
     public void displayStat(){
-        if ( this.health == 0 ){
+        if ( this.health <= 0 ){
             System.out.println("================================");
             System.out.println("   " + this.name + " MATI !");
             System.out.println("================================");
         }else {
-            System.out.println("================");
-            System.out.println(this.name + " Stats");
+            System.out.println("\t" + this.name + " Stats");
             System.out.println("Nama \t\t: " + this.name);
             System.out.println("Health \t\t: " + this.health);
             System.out.println("Armor Name \t: " + this.armor.getName());
